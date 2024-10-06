@@ -39,15 +39,14 @@
         key_name: vprofile-key
         region: "{{region}}"
         instance_type: t2.micro
-        image:
-          id: "{{bastion_ami}}"
+        image_id: "{{bastion_ami}}"
         wait: yes
         wait_timeout: 300
-        tags:
+        instance_tags:
           Name: bastion_host
           Project: vprofile
           Owner: Devops Team
-        exact_count: 1
+        count: 1
         #count_tag:
           #Name: bastion_host
           #Project: vprofile
