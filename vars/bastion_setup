@@ -1,4 +1,4 @@
-bastion_ami: ami-0e593d2b811299b15
+bastion_ami: ami-0ea3c35c5c3284d82
 region: us-east-2
 myip: 174.89.71.55/32
 
