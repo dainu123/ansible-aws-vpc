@@ -35,24 +35,24 @@
             cidr_ip: "{{myip}}"
             rule_desc: allow all port 80
         register: BastionSG_out
-      - name: Creating Bastion host
-        ec2:
-          key_name: vprofile-key
-          region: "{{region}}"
-          instance_type: t2.micro
-          image: "{{bastion-ami}}"
-          wait: yes
-          wait_timeout: 300
-          instance_tags:
-            Name: bastion_host
-            Project: vprofile
-            Owner: Devops Team
-          exact_count: 1
-          count_tag:
-            Name: bastion_host
-            Project: vprofile
-            Owner: Devops Team
-          group_id: "{{BastionSG_out.group_id}}"
+    - name: Creating Bastion host
+      ec2:
+        key_name: vprofile-key
+        region: "{{region}}"
+        instance_type: t2.micro
+        image: "{{bastion-ami}}"
+        wait: yes
+        wait_timeout: 300
+        instance_tags:
+          Name: bastion_host
+          Project: vprofile
+          Owner: Devops Team
+        exact_count: 1
+        count_tag:
+          Name: bastion_host
+          Project: vprofile
+          Owner: Devops Team
+        group_id: "{{BastionSG_out.group_id}}"
         register: bastionhost_out
 
 
