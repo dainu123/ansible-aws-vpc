@@ -33,7 +33,6 @@
             from_port: 22
             to_port: 22
             cidr_ip: "{{myip}}"
-            rule_desc: allow all port 80
         register: BastionSG_out
     - name: Creating Bastion host
       ec2:
