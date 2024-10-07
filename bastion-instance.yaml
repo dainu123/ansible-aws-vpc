@@ -47,15 +47,10 @@
           Project: vprofile
           Owner: Devops Team
         exact_count: 1
-        #count_tag:
-          #Name: bastion_host
-          #Project: vprofile
-          #Owner: Devops Team
         security_group: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
       register: bastionhost_out
-    - debug:
-        var: bastionhost_out
+
 
 
 
