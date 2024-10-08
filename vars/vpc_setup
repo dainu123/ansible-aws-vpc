@@ -20,3 +20,7 @@ zone2: us-east-2b
 zone3: us-east-2c
 
 state: present
+
+#Bastion Vars
+bastion_ami: ami-0ea3c35c5c3284d82
+myip: 174.89.71.55/32
