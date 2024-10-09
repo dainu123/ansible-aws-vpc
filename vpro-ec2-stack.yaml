@@ -60,7 +60,7 @@
             group_id: "{{vproStackSG_out.group_id}}"
     - name: Creating Nginx web01
       amazon.aws.ec2_instance:
-        key-name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{nginx_ami}}"
@@ -76,7 +76,7 @@
       register: web01_out
     - name: Creating tomcat app01
       amazon.aws.ec2_instance:
-        key-name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{tomcat_ami}}"
@@ -92,7 +92,7 @@
       register: app01_out
     - name: Creating memcache mc01
       amazon.aws.ec2_instance:
-        key-name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{memcache_ami}}"
@@ -108,7 +108,7 @@
       register: mc01_out
     - name: Creating RabbitMQ rmq01
       amazon.aws.ec2_instance:
-        key-name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{rmq_ami}}"
@@ -124,7 +124,7 @@
       register: rmq01_out
     - name: Creating Mysql db01
       amazon.aws.ec2_instance:
-        key-name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{mysql_ami}}"
