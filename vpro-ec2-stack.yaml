@@ -143,7 +143,7 @@
         var: db1_out
 
     - local_action:
-        module: ec2-elb_lb
+        module: ec2_elb_lb
         name: "vprofile-elb"
         region: "{{region}}"
         state: present
