@@ -137,10 +137,10 @@
         exact_count: 1
         security_group: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
-      register: db1_out
+      register: db01_out
 
     - debug:
-        var: db1_out
+        var: db01_out
 
     - local_action:
         module: ec2_elb_lb
