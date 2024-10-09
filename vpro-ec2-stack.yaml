@@ -140,7 +140,7 @@
       register: db1_out
 
     - debug:
-        var: db01_out
+        var: db1_out
 
 
 
