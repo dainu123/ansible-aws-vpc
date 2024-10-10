@@ -5,7 +5,7 @@
   gather_facts: False
   tasks:
     - name: Import VPC setup variable
-      include_vars: vars/bastion_setup
+      include_vars: vars/vpc_setup
     - name: import VPC setup variable
       include_vars: vars/output_vars
 
@@ -18,7 +18,7 @@
     - name: Save private key into file bastion-key.pem
       copy:
         content: "{{key_out.key.private_key}}"
-        dest: "./bastion-key.pem"
+        dest: "./bastion_key.pem"
         mode: 0600
       when: key_out.changed
 
@@ -50,7 +50,12 @@
         security_group: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
       register: bastionhost_out
-
+    - name: Insert/Update "BastionSGid" in vars/output_vars
+      blockinfile:
+        path: vars/output_vars
+        backup: yes
+        block: |
+          BastionSGid: {{BastionSG_out.group_id}}
 
 
 
