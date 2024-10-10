@@ -20,7 +20,7 @@
         content: "{{key_out.key.private_key}}"
         dest: "./bastion_key.pem"
         mode: 0600
-      when: key_out.changed=False
+      when: key_out.changed
 
     - name: Create sec grp for bastion host
       ec2_group:
