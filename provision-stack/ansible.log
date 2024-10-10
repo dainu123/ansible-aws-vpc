@@ -80,3 +80,28 @@ stack/inventory_vpro:2: Expected key=value host variable assignment, got: 172.20
 2024-10-10 02:29:24,216 p=5506 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
 2024-10-10 02:29:24,216 p=5506 u=root n=ansible | skipping: no hosts matched
 2024-10-10 02:29:24,216 p=5506 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-10 04:06:33,819 p=13664 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-10 04:06:33,819 p=13664 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-10 04:06:33,819 p=13664 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-10 04:06:33,819 p=13664 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-10 04:06:33,953 p=13664 u=root n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] *********************************************************************************************************************************************************************************************************
+2024-10-10 04:06:33,962 p=13664 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:06:34,995 p=13664 u=root n=ansible | ok: [localhost]
+2024-10-10 04:06:35,008 p=13664 u=root n=ansible | TASK [Install jdk, maven, git] ************************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:06:41,247 p=13664 u=root n=ansible | ok: [localhost] => (item=git)
+2024-10-10 04:06:43,640 p=13664 u=root n=ansible | ok: [localhost] => (item=openjdk-8-jdk)
+2024-10-10 04:06:45,997 p=13664 u=root n=ansible | ok: [localhost] => (item=maven)
+2024-10-10 04:06:46,008 p=13664 u=root n=ansible | TASK [Clone source code from github] ******************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:06:59,365 p=13664 u=root n=ansible | changed: [localhost]
+2024-10-10 04:06:59,371 p=13664 u=root n=ansible | TASK [mvn install command to build artifact] **********************************************************************************************************************************************************************************************************************************
+2024-10-10 04:07:19,394 p=13664 u=root n=ansible | changed: [localhost]
+2024-10-10 04:07:19,403 p=13664 u=root n=ansible | TASK [Copy artifacts to files directory] **************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:07:20,924 p=13664 u=root n=ansible | changed: [localhost] => (item=/root/project/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2024-10-10 04:07:20,934 p=13664 u=root n=ansible | TASK [Copy SQL file to files directory] ***************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:07:21,432 p=13664 u=root n=ansible | ok: [localhost]
+2024-10-10 04:07:21,447 p=13664 u=root n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-10-10 04:07:21,447 p=13664 u=root n=ansible | localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
