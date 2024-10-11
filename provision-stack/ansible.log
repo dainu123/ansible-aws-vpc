@@ -242,3 +242,204 @@ stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:l
 2024-10-10 05:00:26,327 p=17151 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2024-10-10 05:00:26,327 p=17151 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2024-10-10 05:00:26,327 p=17151 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:25,453 p=17332 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-10 05:10:25,453 p=17332 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-
+stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-10 05:10:25,453 p=17332 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-10 05:10:25,453 p=17332 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-10 05:10:25,583 p=17332 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-10 05:10:25,592 p=17332 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-10 05:10:25,816 p=17332 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.103: Permission denied (publickey).", "unreachable": true}
+2024-10-10 05:10:26,772 p=17332 u=root n=ansible | ok: [cntl]
+2024-10-10 05:10:39,365 p=17332 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-10 05:10:39,613 p=17332 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-10 05:10:39,798 p=17332 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-10 05:10:39,937 p=17332 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-10 05:10:39,949 p=17332 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-10 05:10:39,964 p=17332 u=root n=ansible | ok: [cntl]
+2024-10-10 05:10:39,971 p=17332 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-10 05:10:40,290 p=17332 u=root n=ansible | ok: [cntl]
+2024-10-10 05:10:40,303 p=17332 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-10 05:10:40,303 p=17332 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:40,304 p=17332 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:40,304 p=17332 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:40,304 p=17332 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:40,304 p=17332 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 05:10:40,304 p=17332 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:29:25,801 p=2138 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-11 01:29:25,803 p=2138 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-
+stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-11 01:29:25,803 p=2138 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-11 01:29:25,803 p=2138 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-11 01:29:25,936 p=2138 u=root n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] ******************************************************************************************************
+2024-10-11 01:29:25,945 p=2138 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:29:26,944 p=2138 u=root n=ansible | ok: [localhost]
+2024-10-11 01:29:26,955 p=2138 u=root n=ansible | TASK [Install jdk, maven, git] *********************************************************************************************************************************************
+2024-10-11 01:29:37,930 p=2138 u=root n=ansible | ok: [localhost] => (item=git)
+2024-10-11 01:29:40,582 p=2138 u=root n=ansible | ok: [localhost] => (item=openjdk-8-jdk)
+2024-10-11 01:29:42,788 p=2138 u=root n=ansible | ok: [localhost] => (item=maven)
+2024-10-11 01:29:42,798 p=2138 u=root n=ansible | TASK [Clone source code from github] ***************************************************************************************************************************************
+2024-10-11 01:29:43,575 p=2138 u=root n=ansible | ok: [localhost]
+2024-10-11 01:29:43,584 p=2138 u=root n=ansible | TASK [mvn install command to build artifact] *******************************************************************************************************************************
+2024-10-11 01:29:43,626 p=2138 u=root n=ansible | skipping: [localhost]
+2024-10-11 01:29:43,636 p=2138 u=root n=ansible | TASK [Copy artifacts to files directory] ***********************************************************************************************************************************
+2024-10-11 01:29:44,805 p=2138 u=root n=ansible | ok: [localhost] => (item=/root/project/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2024-10-11 01:29:44,812 p=2138 u=root n=ansible | TASK [Copy SQL file to files directory] ************************************************************************************************************************************
+2024-10-11 01:29:45,172 p=2138 u=root n=ansible | ok: [localhost]
+2024-10-11 01:29:45,186 p=2138 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:29:45,186 p=2138 u=root n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-11 01:31:57,721 p=3602 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-11 01:31:57,722 p=3602 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-
+stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-11 01:31:57,723 p=3602 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-11 01:31:57,723 p=3602 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-11 01:31:58,175 p=3602 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-11 01:31:58,205 p=3602 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:31:58,520 p=3602 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.209: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:31:58,569 p=3602 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.253: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:32:00,343 p=3602 u=root n=ansible | ok: [cntl]
+2024-10-11 01:32:12,842 p=3602 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-11 01:32:14,358 p=3602 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-11 01:32:15,325 p=3602 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2024-10-11 01:32:15,358 p=3602 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-11 01:32:15,385 p=3602 u=root n=ansible | ok: [cntl]
+2024-10-11 01:32:15,395 p=3602 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-11 01:32:15,953 p=3602 u=root n=ansible | changed: [cntl]
+2024-10-11 01:32:15,973 p=3602 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:32:15,974 p=3602 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:32:15,974 p=3602 u=root n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:32:15,976 p=3602 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:32:15,976 p=3602 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:32:15,976 p=3602 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:32:15,976 p=3602 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:05,990 p=8902 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-11 01:37:05,991 p=8902 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-
+stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-11 01:37:05,991 p=8902 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-11 01:37:05,991 p=8902 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-11 01:37:06,423 p=8902 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-11 01:37:06,446 p=8902 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:37:06,674 p=8902 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.209: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:06,690 p=8902 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.253: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:06,698 p=8902 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.20.4.146' (ED25519) to the list of known hosts.\r\nubuntu@172.20.4.146: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:06,703 p=8902 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.20.4.61' (ED25519) to the list of known hosts.\r\nubuntu@172.20.4.61: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:06,740 p=8902 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.20.4.66' (ED25519) to the list of known hosts.\r\nubuntu@172.20.4.66: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:07,553 p=8902 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:07,562 p=8902 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-11 01:37:07,574 p=8902 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:07,579 p=8902 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-11 01:37:07,823 p=8902 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:07,834 p=8902 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:37:07,834 p=8902 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:07,835 p=8902 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:07,835 p=8902 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:07,835 p=8902 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:07,835 p=8902 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:07,835 p=8902 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:42,243 p=9033 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-10-11 01:37:42,243 p=9033 u=root n=ansible | [WARNING]:  * Failed to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro with ini plugin: /root/project/ansible-aws-vpc/provision-
+stack/inventory_vpro:36: Expected key=value, got: ansible_ssh_private_key_file:loginkey_vpro.pem
+
+2024-10-11 01:37:42,244 p=9033 u=root n=ansible | [WARNING]: Unable to parse /root/project/ansible-aws-vpc/provision-stack/inventory_vpro as an inventory source
+
+2024-10-11 01:37:42,244 p=9033 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-10-11 01:37:42,343 p=9033 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-11 01:37:42,350 p=9033 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:37:42,571 p=9033 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.209: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:42,588 p=9033 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.253: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:42,599 p=9033 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.146: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:42,607 p=9033 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.61: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:42,643 p=9033 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.66: Permission denied (publickey).", "unreachable": true}
+2024-10-11 01:37:43,345 p=9033 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:43,356 p=9033 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-11 01:37:43,368 p=9033 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:43,373 p=9033 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-11 01:37:43,616 p=9033 u=root n=ansible | ok: [cntl]
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:43,627 p=9033 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:37:43,628 p=9033 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:08,524 p=9608 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-11 01:45:08,532 p=9608 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:45:09,804 p=9608 u=root n=ansible | ok: [cntl]
+2024-10-11 01:45:10,353 p=9608 u=root n=ansible | ok: [web01]
+2024-10-11 01:45:10,417 p=9608 u=root n=ansible | ok: [app01]
+2024-10-11 01:45:10,849 p=9608 u=root n=ansible | ok: [mc01]
+2024-10-11 01:45:11,280 p=9608 u=root n=ansible | ok: [rmq01]
+2024-10-11 01:45:12,397 p=9608 u=root n=ansible | ok: [db01]
+2024-10-11 01:45:12,406 p=9608 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-11 01:45:12,442 p=9608 u=root n=ansible | ok: [cntl]
+2024-10-11 01:45:12,455 p=9608 u=root n=ansible | ok: [web01]
+2024-10-11 01:45:12,471 p=9608 u=root n=ansible | ok: [app01]
+2024-10-11 01:45:12,487 p=9608 u=root n=ansible | ok: [rmq01]
+2024-10-11 01:45:12,488 p=9608 u=root n=ansible | ok: [mc01]
+2024-10-11 01:45:12,494 p=9608 u=root n=ansible | ok: [db01]
+2024-10-11 01:45:12,498 p=9608 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-11 01:45:13,036 p=9608 u=root n=ansible | ok: [cntl]
+2024-10-11 01:45:13,069 p=9608 u=root n=ansible | changed: [mc01]
+2024-10-11 01:45:13,135 p=9608 u=root n=ansible | changed: [rmq01]
+2024-10-11 01:45:13,141 p=9608 u=root n=ansible | changed: [web01]
+2024-10-11 01:45:13,146 p=9608 u=root n=ansible | changed: [app01]
+2024-10-11 01:45:13,369 p=9608 u=root n=ansible | changed: [db01]
+2024-10-11 01:45:13,380 p=9608 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | mc01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:13,381 p=9608 u=root n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:45:57,136 p=9848 u=root n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *****************************************************************************************
+2024-10-11 01:45:57,143 p=9848 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-11 01:45:58,312 p=9848 u=root n=ansible | ok: [cntl]
+2024-10-11 01:45:58,511 p=9848 u=root n=ansible | ok: [web01]
+2024-10-11 01:45:58,512 p=9848 u=root n=ansible | ok: [rmq01]
+2024-10-11 01:45:58,513 p=9848 u=root n=ansible | ok: [app01]
+2024-10-11 01:45:59,194 p=9848 u=root n=ansible | ok: [db01]
+2024-10-11 01:45:59,328 p=9848 u=root n=ansible | ok: [mc01]
+2024-10-11 01:45:59,337 p=9848 u=root n=ansible | TASK [Import VPC setup Variable] *******************************************************************************************************************************************
+2024-10-11 01:45:59,373 p=9848 u=root n=ansible | ok: [cntl]
+2024-10-11 01:45:59,387 p=9848 u=root n=ansible | ok: [web01]
+2024-10-11 01:45:59,403 p=9848 u=root n=ansible | ok: [app01]
+2024-10-11 01:45:59,418 p=9848 u=root n=ansible | ok: [rmq01]
+2024-10-11 01:45:59,420 p=9848 u=root n=ansible | ok: [mc01]
+2024-10-11 01:45:59,425 p=9848 u=root n=ansible | ok: [db01]
+2024-10-11 01:45:59,430 p=9848 u=root n=ansible | TASK [Update hosts file for all the hosts] *********************************************************************************************************************************
+2024-10-11 01:46:00,034 p=9848 u=root n=ansible | ok: [cntl]
+2024-10-11 01:46:00,140 p=9848 u=root n=ansible | ok: [mc01]
+2024-10-11 01:46:00,147 p=9848 u=root n=ansible | ok: [app01]
+2024-10-11 01:46:00,151 p=9848 u=root n=ansible | ok: [rmq01]
+2024-10-11 01:46:00,155 p=9848 u=root n=ansible | ok: [web01]
+2024-10-11 01:46:00,410 p=9848 u=root n=ansible | ok: [db01]
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | app01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | mc01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-11 01:46:00,421 p=9848 u=root n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
