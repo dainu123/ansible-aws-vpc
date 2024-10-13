@@ -3,6 +3,8 @@
   hosts: dbsrvgrp
   gather_facts: False
   tasks:
+    - name: Import VPC variables
+      include_vars: group_vars/dbsrvgrp
     - name: Installing Mysql Service and dependencies
       package:
         name: "{{item}}"
