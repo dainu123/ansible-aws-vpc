@@ -1,14 +1,13 @@
 ---
 - name: Install Erlang and RabbitMQ
-  hosts: rmqsrvgrp
+  hosts: localhost
   become: yes
   tasks:
     - name: Install Erlang from the default repository
       apt:
         name: erlang
         state: present
-        update_cache: yes
-
+        
 
     - name: Install RabbitMQ from the default repository
       apt:
@@ -57,5 +56,6 @@
     - name: Restart RMQ
       service:
         name: rabbitmq-server
-        state: restarted
+        state: daemon-reloaded
+
 
