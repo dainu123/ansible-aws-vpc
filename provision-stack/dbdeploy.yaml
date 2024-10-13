@@ -3,6 +3,9 @@
   hosts: dbsrvgrp
   gather_facts: False
   tasks:
+    - name: Import dbsrvgrp
+      include_vars: group_vars/dbsrvgrp
+
     - name: Copy SQL to dbsrv
       copy:
         src: files/db_backup.sql
